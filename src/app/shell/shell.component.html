@@ -1,0 +1,16 @@
+<div>
+  <div [ngSwitch]="step">
+    <div *ngSwitchCase="1">
+      <app-set-interval></app-set-interval>
+    </div>
+    <div *ngSwitchCase="2">
+      <app-enter-numbers></app-enter-numbers>
+    </div>
+    <div *ngSwitchCase="3">
+      <app-goodbye></app-goodbye>
+    </div>
+    <div *ngSwitchDefault>
+      <app-set-interval></app-set-interval>
+    </div>
+  </div>
+</div>

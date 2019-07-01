@@ -1,0 +1,37 @@
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input__input {
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  padding: 1.5rem 2.5rem;
+  border-radius: 20px;
+  width: 69vw;
+  transition: all 0.2s;
+}
+
+.input__input:focus {
+  outline: none;
+  width: 74vw;
+  background-color: #fff;
+  font-weight: 300;
+  color: #000;
+}
+
+.input__input::-webkit-input-placeholder {
+  font-weight: 100;
+  color: #999;
+}
+
+@media screen and (max-width: 480px) {
+  .input__input::-webkit-input-placeholder {
+    font-size: 0.65em;
+  }
+}
