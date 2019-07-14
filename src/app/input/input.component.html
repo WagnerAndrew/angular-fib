@@ -1,7 +1,6 @@
 <input
   class="input__input"
-  type="text"
-  name="userInput"
-  [(ngModel)]="userInput"
-  placeholder="{{ placeholder }}"
+  placeholder="{{ inputPlaceholder }}"
+  [ngModel]="sharedVar"
+  (ngModelChange)="change($event)"
 />

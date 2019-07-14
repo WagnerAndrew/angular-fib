@@ -9,37 +9,15 @@ export class ProcessService {
   input: string = '';
   fib: boolean = false;
   fibNotice: string = '';
-  interval;
+  interval: number = 0;
   intervalCount: number = 0;
-  numbers: Array<string> = [];
-  printNumbers = [];
+  numbers: string[] = [];
+  printNumbers: string[][] = [];
   step: number = 1;
 
   //TIMER START///////////////////////////////////////////////////////////////////////////////////////////////////////
-
-  //   clearInterval(timer);
-
-  //   tick() {
-
-  //   if (this.intervalCount > 0) {
-  //      this.intervalCount - 1
-  //   } else {
-  //     printNumbers();
-  //     this.intervalCount = this.interval;
-  //   }
-  // }
-  // startTimer() {
-  //   clearInterval(timer);
-  //   timer:number = setInterval(tick(), 1000);
-  // }
-  // stopTimer() {
-  //   clearInterval(timer);
-  // }
-  //TIMER END////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-  //TIMER START///////////////////////////////////////////////////////////////////////////////////////////////////////
   startTimer() {
-    this.interval = setInterval(() => {
+    setInterval(() => {
       if (this.intervalCount > 0) {
         this.intervalCount--;
       } else {
@@ -171,3 +149,25 @@ export class ProcessService {
       };
   };
 }
+
+//TIMER START///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//   clearInterval(timer);
+
+//   tick() {
+
+//   if (this.intervalCount > 0) {
+//      this.intervalCount - 1
+//   } else {
+//     printNumbers();
+//     this.intervalCount = this.interval;
+//   }
+// }
+// startTimer() {
+//   clearInterval(timer);
+//   timer:number = setInterval(tick(), 1000);
+// }
+// stopTimer() {
+//   clearInterval(timer);
+// }
+//TIMER END////////////////////////////////////////////////////////////////////////////////////////////////////////

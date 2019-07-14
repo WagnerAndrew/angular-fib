@@ -1,7 +1,19 @@
-<div>
+<app-header></app-header>
+
+<div class="center">
+  <app-input
+    [inputPlaceholder]="inputPlaceholder"
+    [(sharedVar)]="input"
+  ></app-input>
+</div>
+<div class="center">
+  <app-button [label]="buttonLabel"> </app-button>
+</div>
+
+<!-- <<div>
   <div [ngSwitch]="step">
     <div *ngSwitchCase="1">
-      <app-set-interval></app-set-interval>
+      <app-set-interval [input]="this.input"></app-set-interval>
     </div>
     <div *ngSwitchCase="2">
       <app-enter-numbers></app-enter-numbers>
@@ -13,4 +25,4 @@
       <app-set-interval></app-set-interval>
     </div>
   </div>
-</div>
+</div> -->

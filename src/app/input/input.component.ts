@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-input',
@@ -6,7 +6,14 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./input.component.css']
 })
 export class InputComponent implements OnInit {
-  @Input() placeholder: string;
+  @Input() sharedVar: string;
+  @Input() inputPlaceholder: string;
+  @Output() sharedVarChange = new EventEmitter();
+  change(newValue) {
+    console.log('newvalue', newValue);
+    this.sharedVar = newValue;
+    this.sharedVarChange.emit(newValue);
+  }
 
   constructor() {}
 
