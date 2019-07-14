@@ -9,8 +9,18 @@ import { FormComponent } from './form/form.component';
 import { InputComponent } from './input/input.component';
 import { ButtonComponent } from './button/button.component';
 
+import { TextFieldComponent } from './text-field/text-field.component';
+
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, ShellComponent, FormComponent, InputComponent, ButtonComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    ShellComponent,
+    FormComponent,
+    InputComponent,
+    ButtonComponent,
+    TextFieldComponent
+  ],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]

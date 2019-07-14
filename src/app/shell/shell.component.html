@@ -1,28 +1,66 @@
-<app-header></app-header>
-
-<div class="center">
-  <app-input
-    [inputPlaceholder]="inputPlaceholder"
-    [(sharedVar)]="input"
-  ></app-input>
-</div>
-<div class="center">
-  <app-button [label]="buttonLabel"> </app-button>
-</div>
-
-<!-- <<div>
+<div>
   <div [ngSwitch]="step">
     <div *ngSwitchCase="1">
-      <app-set-interval [input]="this.input"></app-set-interval>
+      <app-header></app-header>
+      <div class="center">
+        <app-input
+          [inputPlaceholder]="inputPlaceholder"
+          [(sharedVar)]="input"
+        ></app-input>
+      </div>
+      <div class="center">
+        <app-button
+          [label]="buttonLabel"
+          (onClick)="userInterval($event)"
+        ></app-button>
+      </div>
     </div>
+
     <div *ngSwitchCase="2">
-      <app-enter-numbers></app-enter-numbers>
+      <app-header></app-header>
+      <div class="center">
+        <app-input
+          [inputPlaceholder]="inputPlaceholder"
+          [(sharedVar)]="input"
+        ></app-input>
+      </div>
+      <div class="center">
+        <app-button
+          [label]="buttonLabel"
+          (onClick)="pushToNumbers()"
+        ></app-button>
+      </div>
+      <div class="center">
+        <button type="button" class="btn btn--white" (click)="pauseTimer()">
+          Pause
+        </button>
+        <button type="button" class="btn btn--white" (click)="startTimer()">
+          Resume
+        </button>
+      </div>
+      <div class="center">
+        <button type="button" class="btn btn--white" (click)="goodbye()">
+          End
+        </button>
+      </div>
     </div>
+
     <div *ngSwitchCase="3">
-      <app-goodbye></app-goodbye>
+      <app-header></app-header>
+      <div class="center">Goodbye</div>
     </div>
+
     <div *ngSwitchDefault>
-      <app-set-interval></app-set-interval>
+      <app-header></app-header>
+      <div class="center">
+        <app-input
+          [inputPlaceholder]="intervalPlaceholder"
+          [(sharedVar)]="input"
+        ></app-input>
+      </div>
+      <div class="center">
+        <app-button (onClick)="userInterval($event)">Set Interval </app-button>
+      </div>
     </div>
   </div>
-</div> -->
+</div>

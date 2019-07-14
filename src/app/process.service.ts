@@ -65,6 +65,8 @@ export class ProcessService {
         (this.input = ''),
         (this.step = this.step + 1);
     }
+
+    console.log('Interval Count is now ' + this.intervalCount);
   };
 
   //Clears the Fib! notification///////////////////////////////////////////////////////////////////////////////////////
